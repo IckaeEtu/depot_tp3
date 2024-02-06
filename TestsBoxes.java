@@ -7,8 +7,8 @@ Box b = new Box();
 /** on veut pouvoir mettre des trucs dedans */
 @Test
 public void testBoxAdd(){
-Box b = new Box()
-b.add("truc1")
-b.add("truc2")
+Box b = new Box();
+b.add("truc1");
+b.add("truc2");
 }
 }
