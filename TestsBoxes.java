@@ -1,3 +1,5 @@
+import java.beans.Transient;
+
 import org.junit.*;
 public class TestsBoxes {
 
@@ -31,4 +33,23 @@ public void retireWithException() {
         b.retire("truc4");
         System.out.println("truc4 retire"); //ne s'affiche pas si excpetion
 }
+}
+
+
+@Test
+public void testBoxAdd(){
+Box b = new Box();
+b.add("truc1");
+b.add("truc2");
+Thing thing = new Thing("truc1");
+assert b.estDeDans(thing);
+assert b.isOpen() == false;
+b.open();
+assert b.isOpen();
+b.close();
+assert b.actionLook() == "la boite est fermee";
+b.open();
+b.actionLook
+
+
 }
