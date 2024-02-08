@@ -15,6 +15,9 @@ b.add("truc1");
 b.add("truc2");
 Thing thing = new Thing("truc1");
 assert b.estDeDans(thing);
+assert b.isOpen() == false;
+b.open();
+assert b.isOpen();
 
 }
 
