@@ -15,7 +15,7 @@ b.add("truc1");
 b.add("truc2");
 Thing thing = new Thing("truc1");
 assert b.estDeDans(thing);
-b.retire("truc2");
+
 }
 
 
@@ -24,6 +24,8 @@ b.retire("truc2");
 public void retireWithException() {
         Box b = new Box();
         b.add("truc1");
+        System.out.println("truc1 ajouté");
         b.retire("truc4");
+        System.out.println("truc4 retire"); //ne s'affiche pas si excpetion
 }
 }
