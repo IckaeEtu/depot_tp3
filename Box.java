@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.lang.Throwable;
 
 class Box{
     
@@ -14,18 +13,13 @@ class Box{
         return this.contents.contains(thing);
     }
 
-    public boolean retire(String truc){
+    public void retire(String truc){
         Thing thing = new Thing(truc);
-        try{
-            return this.contents.remove(thing);
+        if (!this.estDeDans(thing)){
+            throw new IndexOutOfBoundsException("La boite ne contient pas" + truc);
         }
-        catch(IndexOutOfBoundsException iobe) {
-            iobe.printStackTrace();
+        this.contents.remove(thing);
             
-        }
-        finally{
-            System.out.println("finis");
-        }
-        
+
     }
 }
