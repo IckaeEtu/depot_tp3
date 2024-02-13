@@ -33,4 +33,18 @@ class Box{
     public void close(){
         this.open = false;
     }
+
+    public String actionLook() {
+        if (this.isOpen()) {
+            String phrase = "La boite contient:";
+            for (Thing thing: this.contents){
+                phrase += thing.getName();
+            }
+            return phrase;
+        }
+        else {
+            String phrase = "La boite est fermé";
+            return phrase;
+        }
+    }
 }
