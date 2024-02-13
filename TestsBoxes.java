@@ -33,11 +33,11 @@ public void retireWithException() {
         b.retire("truc4");
         System.out.println("truc4 retire"); //ne s'affiche pas si excpetion
 }
-}
+
 
 
 @Test
-public void testBoxAdd(){
+public void testBoxLook(){
 Box b = new Box();
 b.add("truc1");
 b.add("truc2");
@@ -47,9 +47,10 @@ assert b.isOpen() == false;
 b.open();
 assert b.isOpen();
 b.close();
-assert b.actionLook() == "la boite est fermee";
+assert b.actionLook().equals("La boite est fermé");
 b.open();
-b.actionLook
+b.actionLook();
 
 
+}
 }
